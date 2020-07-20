@@ -1,0 +1,19 @@
+{
+  "name": "vue-auto-router-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "kkb": "./bin/kkb.js"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "clean": "^4.0.2",
+    "clear": "^0.1.0",
+    "commander": "^6.0.0",
+    "figlet": "^1.5.0"
+  },
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC"
+}
