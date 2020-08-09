@@ -1,6 +1,11 @@
 const crypto = require('crypto')
+const jsonwebtoken = require('jsonwebtoken') 
+const secret = '12345678'; 
+const opt = { secret: 'jwt_secret',key: 'user' };
+
 module.exports.createToken = token => {
     const ary = token.split('.')
+    
     if (ary.length !== 3) {
         return
     }
@@ -8,8 +13,20 @@ module.exports.createToken = token => {
     return {
         getExp: () => {
             // ##BEGIN## 代码已加密
-JEHJEHJEHJEHJEHJEHJEHJEHJEHJEHJEHJEHOSJOEEOESOEIOEAJEHOEPOOIOPPOEJOEEOOIOSOJEHJXIJEHJASOJSJAIJAXJHOOEPOOIOEXOEIOSSJPPOESOSSOPSJEHJIEOPJOSEOSEOSSOEXJHOOSEOEXOEEOEOJPPOOIOEXOPPOOOJHPOOEJPAJEHJPEOOAOOIOEIOSSJXJJHIJPEJPHJPH
-JEHJEHJEHJEHJEHJEHJEHJEHJEHJEHJEHJEHOEXOSSOEAOPJOEXOESJEHOEPOOIOPPOEJOEEOOIOSOJHOOSSOPEOEP
+            console.log(jsonwebtoken);
+            let decoded = jsonwebtoken.decode(token, secret, opt);
+            return decoded['exp']
+            // const promise = new Promise((resolve, reject) => {
+            //     jsonwebtoken.verify(token, secret, (...arg)=>{
+            //         let time = (new Date(arg[0].expiredAt)).getTime()/1000;
+            //         resolve(time) 
+            //     })
+               
+            // });
+            // let ret = await promise;
+            // console.log(ret);
+            // return ret
+            
             // ##END##
         },
 

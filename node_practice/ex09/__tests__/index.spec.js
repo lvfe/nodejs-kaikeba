@@ -24,5 +24,6 @@ test('练习09 实现装饰器工厂', () => {
     }
     sender('Server1')(Log, 'print')
     const log = new Log()
+    console.log(log.print('Start'));
     expect(log.print('Start')).toBe('Server1 : Start')
 })
