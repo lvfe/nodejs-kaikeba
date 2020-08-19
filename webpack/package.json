@@ -1,0 +1,23 @@
+{
+  "name": "webpackdemo",
+  "version": "1.0.0",
+  "description": "npm i webpack webpack-cli -D",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack",
+    "mine": "webpack --config hello.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "css-loader": "latest",
+    "less-loader": "^6.2.0",
+    "style-loader": "latest",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^4.3.0"
+  }
+}

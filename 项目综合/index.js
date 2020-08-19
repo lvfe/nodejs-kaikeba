@@ -4,10 +4,13 @@
 //         - ajax
 //         - 回调函数
 //         - Node中fs可以进行异步的I/O操作
+// - setTimeout、setInterval、setImmediate（浏览器暂时不支持，只有IE10支持，具体可见MDN）、I/O、UI Rendering。
 // micro task
 // promise, await await
-// promise.nextick
+// promise.nextick (node)
 // MutationObserver
+
+// js callback调用栈， 主进程
 console.log(1);
 setTimeout(()=>{
     console.log('timeout 1');
