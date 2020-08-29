@@ -39,3 +39,21 @@ MPA多页面应用，有多个入口
 spa只有一个入口，一个Chunk
 css loader作用单一，只知道如果处理语法
 style-loader 动态生成style标签，js生成style
+
+post-css //
+1. css3新特性加前缀
+2. rem转px
+css4新特性
+https://github.com/postcss/postcss/blob/master/docs/plugins.md
+
+sourceMap
+1. 帮助定位错误
+
+如何在生产环境部署sourcemap
+开启了好处坏处
+开启了设置成什么值：source-map, hidden-source-map(没有索引)， nosource-source-map（不包含source content）
+不应该将Sourcemap部署到服务器，而是作为错误报告工具
+
+
+webpackDevServer
+硬件启动，而不是dist folder
