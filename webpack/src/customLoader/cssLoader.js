@@ -1,6 +1,7 @@
 const { resolveLoader } = require("../../webpack.config");
 
 module.exports = function (source) {
+  console.log(typeof source);
     return JSON.stringify(source);
 };
   

@@ -1,3 +1,4 @@
 body{
-    background: url('../images/1.png')
+    background: url('../images/1.png') 200px, 200px, no-repeat;
+
 }
