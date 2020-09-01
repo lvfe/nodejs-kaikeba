@@ -45,10 +45,13 @@ module.exports = class webpack {
     console.log(dirname);
     traverse(ast, {
       ImportDeclaration({ node }) {
-        const path1 = "./" + path.join(dirname, node.source.value);
+        // for windows
+        const path1 = ".\\" + path.join(dirname, node.source.value);
+        console.log(path1,123);
         dependencies[node.source.value] = path1;
       },
     });
+    console.log(dependencies);
     //路径拼接path.join()
     const { code } = transformFromAst(ast, null, {
       presets: ["@babel/preset-env"],
